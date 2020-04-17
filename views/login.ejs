@@ -1,0 +1,19 @@
+<%- include("./partials/header") %>
+
+<div class="container" id="container-login">
+   <header id="header-box">
+      <h1 id="header-title">Login</h1>
+      <!-- <span id="header-subtitle">Login</span>    -->
+   </header>
+
+   <form class="form" action="/login" method="POST">
+      <ul class="form-input-list">
+         <label class="form-label"  for="username">Username</label>
+         <li><input class="form-input" id="username" type="text" name="username"></li>
+         <label class="form-label" for="password">Password</label>
+         <li><input class="form-input" id="password" type="password" name="password"></li>
+         <li><button class="form-submit-btn">Login</button></li>
+      </ul>
+   </form>
+</div>
+<%- include("./partials/footer") %>

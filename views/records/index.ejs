@@ -1,0 +1,26 @@
+<%- include("../partials/header") %>
+<div class="container">
+   <header id="header-box">
+         <h1 id="header-title">Records Collection</h1>
+         <span id="header-subtitle">Browse through the records</span>   
+   </header>
+   <div class="record-control">
+      <a class="add-button" href="/records/new">Add Record</a>
+   </div>
+   <div class="records">
+      <% records.forEach(function(record){ %>
+         <div class="record-card">
+            <a  href="/records/<%= record._id %>">
+               <img class="record-image" src="<%= record.image %>">
+            </a>
+            <h3 class="record-name">
+               <a  href="/records/<%= record._id %>"><%= record.title %></a>
+            </h3>
+            <h3 class="record-name">
+               <%= record.artist %></span>
+            </h3>
+         </div>
+      <% }) %>
+   </div>
+</div>
+<%- include("../partials/footer") %>

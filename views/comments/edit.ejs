@@ -1,0 +1,19 @@
+<%- include("../partials/header") %>
+<div class="container">
+   <header id="header-box">
+      <h1 id="header-title">Edit Comment</h1>
+      <span id="header-subtitle">Edit the comment</span>   
+   </header>
+   
+   <form class="new-record-form" action="/records/<%= record_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+      <ul class="new-comment-ul">
+         <li><textarea class="new-comment-input" name="comment[text]" placeholder="Type your comment" maxlength="1000"><%= comment.text %></textarea></li>
+         <li><button id="new-comment-submit">Edit comment</button></li>
+      </ul>
+   </form>
+   
+   <a href="/records">Go back</a>
+</div>
+
+
+<%- include("../partials/footer") %>

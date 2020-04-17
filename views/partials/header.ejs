@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>YelpVinyl</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="/main.css">
+   
+</head>
+<body>
+   
+   <nav id="nav-container">
+      <div class="container" id="nav-bar">
+         <a class="brand" href="/">YelpVinyl</a>
+         <button id="hamburger-btn" type="button" >&#9776;</button>
+         <ul class="nav-btns">
+            <% if(!currentUser){ %> 
+               <li class="nav-btn"><a class="nav-link" href="/login">Login</a></li>
+               <li class="nav-btn"><a class="nav-link" href="/register">Register</a></li>
+            <%} else {%> 
+               
+               <li class="nav-btn" ><a class="nav-link" id="nav-account-icon" href="/logout"><%=currentUser.username%> &#x1F464;</a></li>
+            <% } %> 
+         </ul>
+      </div>
+   </nav>
+   <% if((error && error.length > 0) || (success && success.length > 0)){ %>
+      <div class="container">
+         <% if(error && error.length > 0){ %>
+            <p><%= error %></p>
+         <% } %>
+         <% if(success && success.length>0){ %>
+            <p><%= success %></p>
+         <% } %>  
+      </div>
+   <% } %> 
+
+   

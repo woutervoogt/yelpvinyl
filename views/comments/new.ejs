@@ -1,0 +1,14 @@
+<%- include("../partials/header") %>
+
+<h1>Add new comment to <%= record.name %></h1>
+
+<form class="new-comment-form" action="/records/<%= record._id %>/comments" method="POST">
+   <ul class="new-comment-ul">
+      <li><textarea class="new-comment-input" name="comment[text]" placeholder="Type your comment" maxlength="1000"></textarea></li>
+      <li><button id="new-comment-submit">Add comment</button></li>
+   </ul>
+</form>
+
+<a href="/records">Go back</a>
+
+<%- include("../partials/footer") %>
