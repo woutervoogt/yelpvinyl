@@ -20,6 +20,19 @@ body{
    width: 100%;
 }
 
+/* UI ELEMENTS */
+.button{
+   display: block;
+   background-color: #134257;
+   text-decoration: none;
+   color: #ffffff;
+   border-bottom: solid 4px #0d2b38;
+   padding: 0.8em;
+   border-radius: 3px;
+   width: max-content;
+   font-size: 0.8em;
+}
+
 /* NAVIGATION */
 #nav-container{
    background: #0d2b38;
@@ -72,6 +85,7 @@ body{
    text-shadow: 0 0 0 #a6c7d5;
 }
 
+/* LANDING PAGE */
 #welcome-box{
    display: flex;
    flex-wrap: wrap-reverse;
@@ -124,6 +138,7 @@ body{
    margin: 25px 0;
 }
 
+/* PAGE TITLE */
 #header-box{
    color: #0d2b38;
    margin-bottom: 10px;
@@ -141,11 +156,8 @@ body{
 }
 
 /* RECORD CARD STYLING */
-.record-control{
-   display: flex;
-   justify-content: end;
-   padding-right: 8px;
-
+#add-record-button{
+   margin: 15px auto;
 }
 
 .records{
@@ -209,7 +221,6 @@ body{
    box-shadow: 0 0 3px #0d2b38;
 }
 
-
 .form-submit-btn{
    cursor: pointer;
    background: #0d2b38;
@@ -255,16 +266,6 @@ body{
    min-height: 100px;
 }
 
-.add-button{
-   display: block;
-   background-color: #6d7f87;
-   text-decoration: none;
-   color: white;
-   padding: 0.8em;
-   border-radius: 3px;
-   width: max-content;
-}
-
 #add-comment-button{
    float: right;
    margin: 10px 10px 0 0;
@@ -295,7 +296,7 @@ body{
  @media screen and (min-width: 768px){
    .container{
       min-width: 300px;
-      max-width: 1050px;
+      max-width: 1070px;
       margin: 0 auto;
    }
 
@@ -319,7 +320,6 @@ body{
    
    .nav-link{
       display: flex;
-      /* text-align: center; */
       text-decoration: none;
       color: white;
       font-size: 1.2em;
@@ -345,6 +345,9 @@ body{
       margin-left: 30px;
    }
 
+   #add-record-button{
+      margin: 15px 0;
+   }
 /* RECORD CARD STYLING */
    .records{
       justify-content: start;
