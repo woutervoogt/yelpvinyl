@@ -1,9 +1,45 @@
 <%- include("partials/header") %>
 
-<h1>Landing Page!</h1>
 
-<p>Welcome to YelpCamp</p>
+<div id="welcome-box" class="container">
+    <div class="all-records">
+        <a id="all-records-link" href="/records"><span id="all-records-link-text">View All Records</span></a>
+        <img id="welcome-img" src="/images/music-4226703_1920.jpg" alt="">
+    </div>
+    
+    <div id="welcome-text">
+        <h1 id="welcome-text-title">YelpVinyl</h1>
+        <p id="welcome-text-par">
+            Discover new music. <br>
+            Give your opinion.
+        </p>
+        <p>
+            
+        </p>
+    </div>
+</div>
 
-<a href="/records">View All Records</a>
+<!-- <div class="container">
+    <h1>
+        Newly added
+    </h1>
+    <div class="newest-records"> -->
+        <!-- <%# records.forEach(function(record){ %>
+           <div class="record-card">
+              <a  href="/records/<%#= record._id %>">
+                 <img class="record-image" src="<%#= record.image %>">
+              </a>
+              <h3 class="record-name">
+                 <a  href="/records/<%#= record._id %>"><%#= record.title %></a>
+              </h3>
+              <h3 class="record-name">
+                 <%#= record.artist %></span>
+              </h3>
+           </div>
+        <%# }) %> -->
+    </div>
+</div>
+
+
 
 <%- include("partials/footer") %>
