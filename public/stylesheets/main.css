@@ -241,12 +241,9 @@ body{
 
 }
 
-.form-input, .form-submit-btn{
+.form-input{
    border-radius: 2px;
    padding: 5px 10px;
-}
-
-.form-input{
    border: #6d7f87 1px solid;
    margin-bottom: 10px;
    min-width: 250px;
@@ -255,19 +252,6 @@ body{
 .form-input:focus{
    outline: none;
    box-shadow: 0 0 3px #0d2b38;
-}
-
-.form-submit-btn{
-   cursor: pointer;
-   background: #0d2b38;
-   border: #0d2b38 1px solid;
-   color: white;
-   width: 125px;
-}
-
-.form-submit-btn:hover{
-   background: #134257;
-   border: #134257 1px solid;
 }
 
 /* RECORD SHOW PAGE STYLING*/

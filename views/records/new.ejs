@@ -1,21 +1,25 @@
 <%- include("../partials/header") %>
 <div class="container">
-   <header id="header-box">
-      <h1 id="header-title">New Record</h1>
-      <span id="header-subtitle">Add a new record to the collection</span>   
+   <header class="header-box header-centered">
+      <h1 class="header-title">New Record</h1>
+      <span class="header-subtitle">Add a new record to the collection</span>   
    </header>
    
    <form class="form" action="/records" method="POST">
       <ul class="form-input-list">
          <li><input class="form-input" type="text" name="record[title]" placeholder="Album Title"></li>
          <li><input class="form-input" type="text" name="record[artist]" placeholder="Artist"></li>
-         <li><input class="form-input" type="text" name="record[image]" placeholder="Album Cover Link"></li>
-         <li><textarea class="form-input" name="record[description]" placeholder="Description" maxlength="1000"></textarea></li>
-         <li><button class="form-submit-btn">Add Record</button></li>
+         <li><input class="form-input" type="text" name="record[image]" placeholder="Album Cover Image Link"></li>
+         <li><textarea class="form-input" name="record[description]" placeholder="Music Genres" maxlength="1000"></textarea></li>
+         <li>
+            <button class="button">Add Record</button>
+            <a class="button" href="/records">Cancel</a>
+         </li>
+         
       </ul>
    </form>
    
-   <a href="/records">Go back</a>
+   
 </div>
 
 
