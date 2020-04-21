@@ -400,6 +400,7 @@ body{
    }
 
    #show-artist-title-container{
+      text-align: left;
       padding-left: 2em;
       margin: 0;
    }
