@@ -8,37 +8,40 @@
       <!-- add link to artist -->
          <h1 class="show-artist-title" id="show-artist"><%= record.artist %></h1>
          <h1 class="show-artist-title" id="show-title"><%= record.title %></h1>
+         <p id="show-description"><%= record.description %> </p>
       </div>
    </div>
-   <p>Submitted by: <%= record.author.username %> </p>
+   <p class="show-submitted">Submitted by: <%= record.author.username %> </p>
    <% if(currentUser && record.author.id.equals(currentUser._id)){ %> 
-      <a class="add-button" href="/records/<%= record._id %>/edit">Edit</a>
-      <form action="/records/<%= record._id %>?_method=DELETE" method="POST">
-         <button class="add-button" >Delete</button>
+      <a class="button" href="/records/<%= record._id %>/edit">Edit</a>
+      <form class="delete-form" action="/records/<%= record._id %>?_method=DELETE" method="POST">
+         <button class="button">Delete</button>
       </form>
    <% } %> 
-   <p id="show-description"><%= record.description %> </p>
+  
    
 
    
    <div id="show-comment-section">
-      <a class="add-button" id="add-comment-button" href="/records/<%= record._id %>/comments/new">Leave a Comment</a>
-      <h2>Comments</h2>
+      <a class="button add-comment-button" href="/records/<%= record._id %>/comments/new">Leave a Comment</a>
+      <h2 class="comment-title">Comments</h2>
       
       <% record.comments.forEach(comment => { %>
          <div class="comment-container">
             <h3 class="comment-author"><%= comment.author.username %></h3>
+            <span class="comment-date"><%= comment.date.getDate() + "-" + (comment.date.getMonth()+1) + "-" + comment.date.getFullYear() + " " + comment.date.getHours() + ":" + ("0" + comment.date.getMinutes()).slice(-2)  %></span>
+            <p class="comment-text"><%= comment.text %></p>
+            
             <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
-               <a class="add-button" 
+               <a class="button button-small" 
                   href="/records/<%= record._id %>/comments/<%= comment._id %>/edit">
                   Edit
                </a>
-               <form action="/records/<%= record._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                  <button class="add-button" >Delete</button>
+               <form class="delete-form" action="/records/<%= record._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                  <button class="button button-small">Delete</button>
                </form>
             <% } %> 
-            <span class="comment-date"><%= comment.date.getDate() + "-" + (comment.date.getMonth()+1) + "-" + comment.date.getFullYear() + " " + comment.date.getHours() + ":" + comment.date.getMinutes()  %></span>
-            <p class="comment-text"><%= comment.text %></p>
+            
             
          </div>
       <% }); %>
