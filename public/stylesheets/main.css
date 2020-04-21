@@ -175,19 +175,19 @@ body{
 }
 
 /* PAGE TITLE */
-#header-box{
+.header-box{
    color: #0d2b38;
    margin-bottom: 10px;
    text-align: center;
 }
 
-#header-title{
+.header-title{
    font-size: 1.8em;
    font-weight: normal;
    margin: 0;
 }
 
-#header-subtitle{
+.header-subtitle{
    font-size: 1.2em;
 }
 
@@ -377,8 +377,12 @@ body{
       padding: 0 10px;
    }
 
-   #header-box{
+   .header-box{
       text-align: left;
+   }
+
+   .header-centered{
+      text-align: center;
    }
 
    #welcome-box{
