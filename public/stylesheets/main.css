@@ -20,6 +20,23 @@ body{
    width: 100%;
 }
 
+.message-box-error, .message-box-success{
+   text-align: center;
+   width: 80%;
+   margin: 0 auto;
+   font-weight: 600;
+}
+
+.message-box-success{
+   border: 1px solid #4F8A10;
+   background: #DFF2BF;
+}
+
+.message-box-error{
+   background: #FFD2D2;
+   border: 1px solid #D8000C;
+}
+
 /* UI ELEMENTS */
 .button{
    display: inline-block;

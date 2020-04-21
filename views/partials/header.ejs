@@ -27,10 +27,10 @@
    <% if((error && error.length > 0) || (success && success.length > 0)){ %>
       <div class="container">
          <% if(error && error.length > 0){ %>
-            <p><%= error %></p>
+            <p class="message-box-error"><%= error %></p>
          <% } %>
          <% if(success && success.length>0){ %>
-            <p><%= success %></p>
+            <p class="message-box-success"><%= success %></p>
          <% } %>  
       </div>
    <% } %> 
