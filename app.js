@@ -57,4 +57,4 @@ app.use(indexRoutes);
 app.use("/records", recordRoutes);
 app.use("/records/:id/comments", commentRoutes);
 
-app.listen("3000", () => {console.log("server is up!");});
+server.listen("3000", () => {console.log("server is up!");});
