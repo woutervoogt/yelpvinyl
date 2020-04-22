@@ -15,8 +15,17 @@ const express    = require("express"),
 const commentRoutes  = require("./routes/comments"),
       recordRoutes   = require("./routes/records"),
       indexRoutes    = require("./routes/index");
+      
+// mongoose.connect("mongodb://localhost/vinyl_camp");
+mongoose.connect("mongodb+srv://wouter:dCMsQTzvTV9JY77SgqBv@yelpvinylcluster-qfnbc.mongodb.net/yelp_vinyl?retryWrites=true&w=majority", {
+      useNewUrlParser: true,
+      useCreateIndex: true
+   }).then(() => {
+      console.log("connected to DB");
+   }).catch(err => {
+      console.log("ERROR:", err.message);
+   });
 
-mongoose.connect("mongodb://localhost/vinyl_camp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
