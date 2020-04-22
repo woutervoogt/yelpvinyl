@@ -19,7 +19,8 @@ const commentRoutes  = require("./routes/comments"),
 // mongoose.connect("mongodb://localhost/vinyl_camp");
 mongoose.connect("mongodb+srv://wouter:dCMsQTzvTV9JY77SgqBv@yelpvinylcluster-qfnbc.mongodb.net/yelp_vinyl?retryWrites=true&w=majority", {
       useNewUrlParser: true,
-      useCreateIndex: true
+      useCreateIndex: true,
+      useUnifiedTopology: true
    }).then(() => {
       console.log("connected to DB");
    }).catch(err => {
