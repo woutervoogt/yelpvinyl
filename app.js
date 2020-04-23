@@ -17,7 +17,7 @@ const commentRoutes  = require("./routes/comments"),
       indexRoutes    = require("./routes/index");
       
 // mongoose.connect("mongodb://localhost/vinyl_camp");
-mongoose.connect("mongodb+srv://wouter:dCMsQTzvTV9JY77SgqBv@yelpvinylcluster-qfnbc.mongodb.net/yelp_vinyl?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://wouter:dCMsQTzvTV9JY77SgqBv@yelpvinylcluster-qfnbc.mongodb.net/vinyl_camp?retryWrites=true&w=majority", {
       useNewUrlParser: true,
       useCreateIndex: true,
       useUnifiedTopology: true
