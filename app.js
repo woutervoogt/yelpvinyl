@@ -57,4 +57,5 @@ app.use(indexRoutes);
 app.use("/records", recordRoutes);
 app.use("/records/:id/comments", commentRoutes);
 
-server.listen("3000", () => {console.log("server is up!");});
+const port = process.env.PORT || 3000;
+app.listen(port, () => {console.log("server is up!");});
