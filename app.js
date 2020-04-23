@@ -1,5 +1,6 @@
 const express    = require("express"),
       app        = express(),
+      dotEnv     = require("dotenv").config(),
       bodyParser = require("body-parser"),
       mongoose   = require("mongoose"),
       flash      = require("connect-flash"),
@@ -15,9 +16,10 @@ const express    = require("express"),
 const commentRoutes  = require("./routes/comments"),
       recordRoutes   = require("./routes/records"),
       indexRoutes    = require("./routes/index");
-      
-// mongoose.connect("mongodb://localhost/vinyl_camp");
-mongoose.connect("mongodb+srv://wouter:dCMsQTzvTV9JY77SgqBv@yelpvinylcluster-qfnbc.mongodb.net/vinyl_camp?retryWrites=true&w=majority", {
+
+//CONNECT DATABASE
+const dbUrl = process.env.DATABASEURL || "mongodb://localhost/vinyl_camp";
+mongoose.connect(dbUrl, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useUnifiedTopology: true
@@ -36,7 +38,7 @@ app.use(flash());
 
 //PASSPORT CONFIG
 app.use(require("express-session")({
-   secret: "Walbe wolla goeds denkao",
+   secret: process.env.PASSPORTSECRET,
    resave: false,
    saveUninitialized: false
 }));
